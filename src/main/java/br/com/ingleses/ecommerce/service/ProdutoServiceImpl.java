@@ -47,6 +47,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public List<Produto> buscarTodos() {
+
         return produtoRepository.findAll();
     }
 

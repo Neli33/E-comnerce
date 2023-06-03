@@ -52,16 +52,12 @@ public class ClienteServiceImpl implements ClienteService {
             throw new Exception("Nome é obrigatório");
 
         }
-/*
-        if (cliente.getNumero() == null || cliente.getNumero().isEmpty()) {
+
+        if (cliente.getNumero() == null) {
             throw new Exception("Numero é obrigatório");
 
         }
 
-        if (cliente.getComplemento() == null || cliente.getComplemento().isEmpty()) {
-            throw new Exception("Nome é obrigatório");
-
-        }*/
         if (cliente.getBairro() == null || cliente.getBairro().isEmpty()) {
             throw new Exception("Bairro é obrigatório");
 
@@ -94,7 +90,7 @@ public class ClienteServiceImpl implements ClienteService {
         if (opt.isEmpty()) {
             throw new Exception("Cliente não encontrado!");
         }
-        return null;
+        return opt.get();
     }
 
 

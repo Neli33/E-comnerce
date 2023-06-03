@@ -1,7 +1,9 @@
 package br.com.ingleses.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -14,6 +16,8 @@ public class PedidoItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
+    @ToString.Exclude
     @ManyToOne
     @JoinColumn(nullable = false)
     private Pedido pedido;
